@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="E0d-Qp-dyG" customClass="DRDateSelectView" customModule="DRPickerView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgK-tG-UiU">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="KUG-4r-GCY"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="按月">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.84313725490000002" green="0.71764705880000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtns:" destination="E0d-Qp-dyG" eventType="touchUpInside" id="f6s-Ed-j9j"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dn-Hf-4u9">
+                    <rect key="frame" x="160" y="0.0" width="160" height="45"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="按年">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.84313725490000002" green="0.71764705880000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtns:" destination="E0d-Qp-dyG" eventType="touchUpInside" id="aQQ-qt-lzG"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3D-ES-xxv">
+                    <rect key="frame" x="0.0" y="45" width="320" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="eKi-I9-lTi"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RYt-u5-mTA">
+                    <rect key="frame" x="0.0" y="46" width="320" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="cKR-8d-kng"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="w2I-aA-LfJ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="u3D-ES-xxv" firstAttribute="leading" secondItem="E0d-Qp-dyG" secondAttribute="leading" id="BwD-f0-SW8"/>
+                <constraint firstItem="u3D-ES-xxv" firstAttribute="top" secondItem="8Dn-Hf-4u9" secondAttribute="bottom" id="Dcw-YX-rAn"/>
+                <constraint firstItem="8Dn-Hf-4u9" firstAttribute="width" secondItem="MgK-tG-UiU" secondAttribute="width" id="F04-w1-IvB"/>
+                <constraint firstItem="RYt-u5-mTA" firstAttribute="leading" secondItem="E0d-Qp-dyG" secondAttribute="leading" id="GvE-B7-Uwv"/>
+                <constraint firstItem="RYt-u5-mTA" firstAttribute="top" secondItem="u3D-ES-xxv" secondAttribute="bottom" id="LHd-6i-4m5"/>
+                <constraint firstItem="8Dn-Hf-4u9" firstAttribute="height" secondItem="MgK-tG-UiU" secondAttribute="height" id="NUx-YN-c8T"/>
+                <constraint firstItem="8Dn-Hf-4u9" firstAttribute="leading" secondItem="MgK-tG-UiU" secondAttribute="trailing" id="OVx-Yx-gVw"/>
+                <constraint firstItem="MgK-tG-UiU" firstAttribute="top" secondItem="E0d-Qp-dyG" secondAttribute="top" id="Vtc-CV-T1I"/>
+                <constraint firstItem="8Dn-Hf-4u9" firstAttribute="top" secondItem="E0d-Qp-dyG" secondAttribute="top" id="ZJN-IQ-4kV"/>
+                <constraint firstAttribute="trailing" secondItem="RYt-u5-mTA" secondAttribute="trailing" id="c31-2F-5D5"/>
+                <constraint firstItem="MgK-tG-UiU" firstAttribute="leading" secondItem="E0d-Qp-dyG" secondAttribute="leading" id="r4M-xA-6Es"/>
+                <constraint firstAttribute="trailing" secondItem="u3D-ES-xxv" secondAttribute="trailing" id="uu8-oy-RHv"/>
+                <constraint firstAttribute="trailing" secondItem="8Dn-Hf-4u9" secondAttribute="trailing" id="vC5-mc-YEp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="RYt-u5-mTA" id="oMk-YW-wxd"/>
+                <outlet property="collectionViewHCons" destination="cKR-8d-kng" id="MFE-D4-YX6"/>
+                <outlet property="layout" destination="w2I-aA-LfJ" id="a6j-tl-11m"/>
+                <outlet property="monthBtn" destination="MgK-tG-UiU" id="5Ul-hI-xfl"/>
+                <outlet property="yearBtn" destination="8Dn-Hf-4u9" id="ZKy-NX-eQb"/>
+            </connections>
+            <point key="canvasLocation" x="542" y="-28"/>
+        </view>
+    </objects>
+</document>
